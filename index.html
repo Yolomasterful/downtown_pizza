@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Downtown Pizza</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+    <body>
+    <h1>Downtown Pizza</h1>
+        <main class="card">
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Customer Information</legend>
+                    <div class="form-grid">
+                        <label for="name">Name (Required)</label>
+                        <input class="input_check" type="text" id="name" required placeholder="" minlength="2">
+                        <label for="address">Address (Required)</label>
+                        <input class="input_check" type="text" id="address" required placeholder="">
+                        <label for="phone">Phone (Required)</label>
+                        <input class="input_check" type="tel" id="phone" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890">
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Order</legend>
+                    <div class="form-grid">
+                        <label>Crust</label>
+                        <div class="radio">
+                            <label><input type="radio" name="crust" required> Thin</label>
+                            <label><input type="radio" name="crust" required> Classic</label>
+                            <label><input type="radio" name="crust" required> Deep Dish</label>
+                        </div>
+                    </div>
+                    <div class="form-grid spacer">
+                        <label>Toppings</label>
+                        <div class="grid">
+                            <label for="pepperoni">Pepperoni</label>
+                            <input type="checkbox" id="pepperoni" name="toppings">
+                            <label for="mushroom">Mushroom</label>
+                            <input type="checkbox" id="mushroom" name="toppings">
+                            <label for="olives">Olives</label>
+                            <input type="checkbox" id="olives" name="toppings">
+                            <label for="greenpeppers">Green Peppers</label>
+                            <input type="checkbox" id="greenpeppers" name="toppings">
+                        </div>
+                    </div>
+                    <div class="form-grid">
+                        <label for="quantity">Quantity</label>
+                        <input class="input_check" type="number" id="quantity" required placeholder="" min="1" max="10">
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Delivery & Payment</legend>
+                    <div class="form-grid">
+                        <label for="instructions">Delivery Instructions</label>
+                        <textarea id="instructions"></textarea>
+                        <label for="delivery-date">Delivery Date</label>
+                        <input type="datetime-local" id="delivery-date" required min="2026-10-06T00:00">
+                        <label for="payment">Payment Method</label>
+                        <select id="payment" required>
+                            <option value="">Select Payment Method</option>
+                            <option value="cash">Cash</option>
+                            <option value="credit">Credit</option>
+                            <option value="debit">Debit</option>
+                        </select>
+                    </div>
+                </fieldset>
+                <div class="button-row">
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button>
+                </div>
+
+            </form>
+            <aside>
+                <table>
+                    <caption>Order Summary</caption>
+                    <thead>
+                    <tr>
+                        <th scope="col">Item</th>
+                        <th scope="col">Details</th>
+                        <th scope="col">Price</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Base pizza</td>
+                        <td>Large (12"), Thin crust</td>
+                        <td>$16.99</td>
+                    </tr>
+                    <tr>
+                        <td>Toppings</td>
+                        <td>Mushrooms, Olives, Extra cheese</td>
+                        <td>$4.50</td>
+                    </tr>
+                    <tr>
+                        <td>Delivery fee</td>
+                        <td>Standard delivery</td>
+                        <td>$3.99</td>
+                    </tr>
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                        <td colspan="2"><strong>Total</strong></td>
+                        <td><strong>$25.48</strong></td>
+                    </tr>
+                    </tfoot>
+                </table>
+            </aside>
+
+
+        </main>
+    </body>
+</html>
